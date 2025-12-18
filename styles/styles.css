@@ -1,8 +1,23 @@
 body {
-    font-family: "Inter", arial, sans-serif;
+    font-family: comfortaa, sans-serif;
     margin: 0 auto;
     padding: 0;
 }
+
+
+.comfortaa-400 {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.petit-formal-script-regular {
+  font-family: "Petit Formal Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* NAVIGATION */
 .hamburger {
@@ -83,152 +98,72 @@ body {
         left: 0;
         z-index: -1;
     }
-
-    .text-container {
-        position: absolute;
-        top: 40%;
-        color: white;
-
-        h1 {
-            font-size: calc(1rem + 7vw);
-            margin: 0 0 10px;
-            padding-left: 20px;
-        }
-    
-        p {
-            padding-left: 20px;
-            font-size: calc(1rem + 0.3vw);
-            margin: 0 0 20px;
-        }
-    }
-
-    .button-container {
-        position: absolute;
-        top: 80%; /* Zorgt ervoor dat de knoppen iets onder de tekst komen */
-        padding-left: 20px;
-    }
-
-        button {
-            font-size: 1em;
-            background-color: #f7dda2;
-            border: 1px solid #d14b08;
-            color: #d14b08;
-            border: none;
-            height: 2.5em;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            width: 13em;
-        }
-    
-        button:hover {
-            background-color: #fff0d1;
-            border: 1px solid #a23a06;
-            color: #a23a06;
-        }
 }
 
 /* SERVICES-SECTION */
 .services-section {
+    text-align: center;
+
     h2{
         padding-left: 20px;
     }
 
-    .services-image-container {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        padding: 20px;
-
-        @media (min-width: 1024px){
-            flex-wrap: nowrap;
-        }
-    }
-
-    button {
-        border: none;
-        border-radius: 20px;
-        width: 40em;
-        height: 15em; /* Zorgt voor een vaste hoogte van de knoppen */
-        padding: 20px;
-        text-align: center;
-        background-size: cover; /* Zorgt ervoor dat de achtergrondafbeelding het hele knopgebied vult */
-        background-position: center; /* Centraal positioneert de afbeelding in de knop */
-        position: relative; /* Nodig om de tekst correct te positioneren */
-        color: white;  /* Tekst zichtbaar maken op de afbeelding */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-        h3 {
-            margin: 0;
-            font-size: 1.5rem;
-            position: relative; /* Voor de tekst boven de achtergrondafbeelding */
-            z-index: 2;
+    .ticket-button {
+            font-family: comfortaa, sans-serif;
+            background-color: #d14b08;
+            border: 1px solid #d14b08;
+            box-shadow: 0 4px #a23a06;
+            color: #fff0d1;
+            border: none;
+            height: 2.5em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.4s ease;
+            width: 13em;
+            display: inline-block;
+            font-weight: bold;
+            text-decoration: none;
         }
 
-        p {
-            margin: 10px 0 0;
-            font-size: 1rem;
-            position: relative; /* Voor de tekst boven de achtergrondafbeelding */
-            z-index: 2;
+        .ticket-button:hover {
+            transform: scale(1.01);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            background-color: #fff0d1;
+            border: 1px solid #a23a06;
+            color: #a23a06;
+            box-shadow: 0 4px #a23a06;
         }
-    }
+}
 
-    button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    button::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.3); 
-        border-radius: 20px;
-        z-index: 1; /* Plaats de overlay onder de tekst maar boven de achtergrond */
-    }
-
-    button:nth-child(1) {
-        background-image: url("../images/lollywood-poster.png");
-    }
-
-    button:nth-child(2) {
-        background-image: url("../images/lollywood-poster.png");
-    }
-
-    button:nth-child(3) {
-        background-image: url("../images/lollywood-poster.png");
-    }
+/* CALL-TO-ACTION-SECTION */
+.call-to-action-section {
+    font-family: "Petit Formal Script", cursive;
+    text-align: center;
+    font-size: x-large;
+    background-color: #f7dda2;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
 }
 
 
-/* USP-SECTION */
+/* USP GOEDE DOELEN-SECTION */
 
 .usp-section {
+    background-color: #f7dda2;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
 
-    @media (min-width: 1024px) {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-
-            h2 {
-                grid-column: span 3; /* H2 blijft bovenaan en neemt alle kolommen in */
-            }
+    @media (min-width: 701px) {
+            display: flex;
+            flex-direction: row;
         }
 
     .usp-container {
         display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 20px;
+        grid-template-columns: 1fr 3fr;
         border-radius: 20px;
         padding: 20px;
 
@@ -241,54 +176,11 @@ body {
     }
 }
 
-/* QUOTE-SECTION */
-.quote-image-section{
-    padding: 20px;
-
-    .quote-container{
-        display: flex;
-        flex-direction: column;
-
-        @media (min-width: 1024px){
-            display: grid;
-            grid-template-columns: 4fr 1fr;
-        }
-
-        img{
-            width: 250px;
-            height: auto;
-            border-radius: 20px;
-
-            @media (max-width: 768px){
-                display: none;
-            }
-        }
-
-        button {
-            font-size: 1em;
-            background-color: #d14b08;
-            border: 1px solid #d14b08;
-            color: #f7dda2;
-            border: none;
-            height: 2.5em;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            width: 13em;
-        }
-    
-        button:hover {
-            background-color: #f7dda2;
-            border: 1px solid #d14b08;
-            color: #d14b08;
-        }
-    }
-}
-
-
 /* PROJECTS-SECTION */
 .projects-section {
+    background-color: #f7dda2;
     padding-bottom: 20px;
+    padding-top: 3rem;
 
     h2{
         padding-left: 20px;
@@ -301,7 +193,8 @@ body {
         padding: 20px;
 
         @media (min-width: 1024px){
-            flex-wrap: nowrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
         }
     }
 
@@ -353,15 +246,11 @@ body {
     }
 
     button:nth-child(1) {
-        background-image: url("../images/lollywood-poster.png");
+        background-image: url("../images/Cardea.png");
     }
 
     button:nth-child(2) {
-        background-image: url("../images/lollywood-poster.png");
-    }
-
-    button:nth-child(3) {
-        background-image: url("../images/lollywood-poster.png");
+        background-image: url("../images/Leiden-Sportzomer.png");
     }
 }
 

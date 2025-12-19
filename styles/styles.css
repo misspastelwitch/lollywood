@@ -1,15 +1,7 @@
 body {
-    font-family: comfortaa, sans-serif;
+    font-family: montserrat, sans-serif;
     margin: 0 auto;
     padding: 0;
-}
-
-
-.comfortaa-400 {
-  font-family: "Comfortaa", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .petit-formal-script-regular {
@@ -18,6 +10,12 @@ body {
   font-style: normal;
 }
 
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 /* NAVIGATION */
 .hamburger {
@@ -25,7 +23,7 @@ body {
     top: 20px;
     right: 20px;
     font-size: 30px;
-    color: #f7dca2;
+    color: #a23a06;
     cursor: pointer;
     z-index: 10;
     border: none;
@@ -78,7 +76,7 @@ body {
 }
 
 .menu ul li a:hover {
-    color: #ff5500;
+    color: #a23a06;
 }
 
 
@@ -101,21 +99,41 @@ body {
 }
 
 /* SERVICES-SECTION */
+.title {
+    font-family: "Petit Formal Script", cursive;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
 .services-section {
     text-align: center;
 
     h2{
-        padding-left: 20px;
+        padding-left: 0px;
     }
-
+.about-text {
+    font-size: large;
+    padding: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+.about-text-2 {
+    font-size: x-large;
+    padding: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+    font-weight: bold;
+    color: #a23a06;
+}
     .ticket-button {
-            font-family: comfortaa, sans-serif;
+            font-family: montserrat, sans-serif;
             background-color: #d14b08;
             border: 1px solid #d14b08;
             box-shadow: 0 4px #a23a06;
             color: #fff0d1;
             border: none;
-            height: 2.5em;
+            height: 2em;
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.4s ease;
@@ -123,6 +141,7 @@ body {
             display: inline-block;
             font-weight: bold;
             text-decoration: none;
+            padding-top: 1rem;
         }
 
         .ticket-button:hover {
@@ -145,7 +164,13 @@ body {
     padding-bottom: 3rem;
 }
 
-
+.important-info-section{
+    font-family: montserrat, sans-serif;
+    text-align: center;
+    font-size: large;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
 /* USP GOEDE DOELEN-SECTION */
 
 .usp-section {
@@ -162,16 +187,21 @@ body {
         }
 
     .usp-container {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
+
         border-radius: 20px;
         padding: 20px;
+        flex: 1;
 
         img {
             width: 100%;
             height: auto;
             border-radius: 20px;
             align-self: center;
+        }
+
+        .usp-text-container {
+            padding-left: 20px;
+            margin: 0%;
         }
     }
 }
@@ -197,61 +227,10 @@ body {
             grid-template-columns: 1fr 1fr;
         }
     }
-
-    .project-button {
-        border: none;
-        border-radius: 20px;
-        width: 40em;
-        height: 15em; /* Zorgt voor een vaste hoogte van de knoppen */
-        padding: 20px;
-        text-align: center;
-        background-size: cover; /* Zorgt ervoor dat de achtergrondafbeelding het hele knopgebied vult */
-        background-position: center; /* Centraal positioneert de afbeelding in de knop */
-        position: relative; /* Nodig om de tekst correct te positioneren */
-        color: white;  /* Tekst zichtbaar maken op de afbeelding */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-        h3 {
-            margin: 0;
-            font-size: 1.5rem;
-            position: relative; /* Voor de tekst boven de achtergrondafbeelding */
-            z-index: 2;
-        }
-
-        p {
-            margin: 10px 0 0;
-            font-size: 1rem;
-            position: relative; /* Voor de tekst boven de achtergrondafbeelding */
-            z-index: 2;
-        }
-    }
-
-    button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    button::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.3); 
-        border-radius: 20px;
-        z-index: 1; /* Plaats de overlay onder de tekst maar boven de achtergrond */
-    }
-
-    button:nth-child(1) {
-        background-image: url("../images/Cardea.png");
-    }
-
-    button:nth-child(2) {
-        background-image: url("../images/Leiden-Sportzomer.png");
-    }
+.sponsors{
+height: 6rem;
+padding: 2rem;
+}
 }
 
 /* FOOTER */
@@ -283,6 +262,6 @@ footer{
         display: grid;
         grid-template-columns: 0.5fr 1fr 1fr 1fr;
         text-align: left;
-        padding-bottom: 5em;
+        padding-bottom: 3em;
     }
 }

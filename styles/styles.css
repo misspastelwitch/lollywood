@@ -99,6 +99,18 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+
+        img {
+            position: static;
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+
 /* SERVICES-SECTION */
 .title {
     font-family: "Petit Formal Script", cursive;
@@ -189,9 +201,7 @@ body {
         flex-direction: column;
         text-align: center;
 
-        .info-text {
-            text-align: center;
-        }
+      
     }
 }
 /* USP GOEDE DOELEN-SECTION */
